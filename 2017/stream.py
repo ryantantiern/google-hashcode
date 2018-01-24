@@ -34,7 +34,7 @@ def get_data():
 			for j in range(k):
 				# There are k cache servers connected to enpoint i
 				next_line = f.readline().rstrip().split()
-				ep_cs[(i, next_line[0])] = next_line[1]
+				ep_cs[(i, next_line[0])] = next_line[1] # i, next_line[0], next_line[1] = endpoint id, cache server id, latency
 
 		for i in range(int(nrequests)):
 			line = f.readline().rstrip().split()
